@@ -8,7 +8,7 @@ function _fzf_k8s_search_api_resources --description "Search api-resources on th
         --ansi \
         --header-lines=1 \
         --preview="$k_cmd get {1}" \
-        --preview-window="right:100:wrap" \
+        --preview-window="right:70:wrap" \
         $fzf_k8s_api_resources_opts
     )
     if test $status -eq 0
