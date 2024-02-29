@@ -7,6 +7,8 @@
 ## Search kubernetes resources
 Extends [patrickF1/fzf.fish](https://github.com/PatrickF1/fzf.fish) with a kubernetes layer, to enable fzf search for all api resources on a cluster.  
 
+<p align="center"><img src="/img/fzf-k8s.gif?raw=true"/></p>
+
 ## Installation
 **very wip**
 1. Use a fish plugin manager like [fisher](https://github.com/jorgebucaran/fisher) to install [patrickf1/fzf.fish](https://github.com/PatrickF1/fzf.fisk)  
