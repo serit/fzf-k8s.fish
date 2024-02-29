@@ -4,6 +4,7 @@ function _fzf_k8s_auto_search --description "Search resource depending on conten
     # search api-resources if commandline is empty
     if test -z "$cmd"
       _fzf_k8s_search_api_resources
+      return
     end
 
     # search api-resources if resource does not exist
