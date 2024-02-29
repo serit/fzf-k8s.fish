@@ -1,4 +1,4 @@
-function _fzf_k8s_search_api_resources.fish --description "Search api-resources on the current kubernetes cluster"
+function _fzf_k8s_search_api_resources --description "Search api-resources on the current kubernetes cluster"
     set -f k_cmd (command -v kubectl || "kubectl")
     set -f k_preview_fmt "kubectl api-resources"
     set -f api_resource_selected (
@@ -13,5 +13,9 @@ function _fzf_k8s_search_api_resources.fish --description "Search api-resources 
         --preview-window="right:100:wrap" \
         $fzf_k8s_api_resources_opts
     )
+    if test $status -eq 0
+      _fzf_k8s_search_resource $api_resource_selected
+    end
+
     commandline --function repaint
 end
