@@ -5,15 +5,15 @@ function _fzf_k8s_search_api_resources --description "Search api-resources on th
       $k_cmd api-resources -oname  | \
       _fzf_wrapper --multi \
         --prompt="Api-resources> " \
-        --query (commandline --current-token) \
         --ansi \
         --header-lines=1 \
-        #--preview="$k_cmd get '$k_preview_fmt' -p {1} || echo 'Cannot get {1}'" \
         --preview="$k_cmd get {1}" \
         --preview-window="right:100:wrap" \
         $fzf_k8s_api_resources_opts
     )
     if test $status -eq 0
+      #clean commandline and pass api resource to search_resource
+      commandline 
       _fzf_k8s_search_resource $api_resource_selected
     end
 
