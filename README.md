@@ -25,13 +25,15 @@ Extends [patrickF1/fzf.fish](https://github.com/PatrickF1/fzf.fish) with a kuber
 
 ## Usage
 After binding auto search, use it with e.g  
-    ```
-    kubectl get <fzf-k8s>
-    ```
+```
+kubectl get <fzf-k8s>
+```
 or  
-    ```
-    kubectl get pods <fzf-k8s>
-    ```
+
+```
+kubectl get pods <fzf-k8s>
+```
+
 Auto search will first give you a list of all api-resources available on the cluster. If you've already specified a resource in the commandline, 
 it will jump straight to that resource.
 
