@@ -11,7 +11,7 @@ Extends [patrickF1/fzf.fish](https://github.com/PatrickF1/fzf.fish) with a kuber
 
 ## Installation
 **very wip**
-1. Use a fish plugin manager like [fisher](https://github.com/jorgebucaran/fisher) to install [patrickf1/fzf.fish](https://github.com/PatrickF1/fzf.fisk)  
+1. Use a fish plugin manager like [fisher](https://github.com/jorgebucaran/fisher) to install [patrickf1/fzf.fish](https://github.com/PatrickF1/fzf.fish)  
 
 1. Install fzf-k8s.fish
     ```
