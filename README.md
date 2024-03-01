@@ -19,10 +19,15 @@ Extends [patrickF1/fzf.fish](https://github.com/PatrickF1/fzf.fish) with a kuber
     ```
 
 1. bind e.g ctrl+alt+k to auto search (put in your fish configuration)
-    ``` 
-    bind \e\ck _fzf_k8s_auto_search
-    bind \e\ck _fzf_k8s_auto_search --mode insert 
-    ```
+   ``` 
+   bind \e\ck _fzf_k8s_auto_search
+   bind \e\ck _fzf_k8s_auto_search --mode insert 
+   ```
+   It is also possible to directly bind a resource with c+f to search pods
+   ```
+   bind \cf --mode insert "_fzf_k8s_search_resource pods"
+   bind \cf "_fzf_k8s_search_resource pods"
+   ```
 
 
 ## Usage
