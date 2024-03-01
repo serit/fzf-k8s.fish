@@ -40,4 +40,6 @@ Auto search will first give you a list of all api-resources available on the clu
 it will jump straight to that resource.
 
 
-
+## improvements
+- Auto search should add the api-resource if only `kubectl get/logs/port-forward` is run, e.g `<api-resource>/<resource>`
+- Better parsing of commandline to handle flags like `--namespace`, and don't assume the resource will be at argv[3], e.g `kubectl get --namespace test pods`
