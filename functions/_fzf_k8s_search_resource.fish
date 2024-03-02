@@ -12,7 +12,7 @@ function _fzf_k8s_search_resource --description "Search resource on the current 
     )
     if test $status -eq 0
       set -f resource (string split -m1 " " -- $resource_selected)[1]
-      commandline --current-token --replace -- $resource
+      commandline --current-token --replace -- "$resource "
     end
 
     commandline --function repaint
