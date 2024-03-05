@@ -16,5 +16,4 @@ function _fzf_k8s_search_resource --description "Search resource on the current 
     end
 
     commandline --function repaint
-    return $resource
 end
