@@ -3,7 +3,7 @@ function _fzf_k8s_search_api_resources --description "Search api-resources on th
     set -f k_preview_fmt "kubectl api-resources"
     set -f api_resource_selected (
       $k_cmd api-resources -oname  | \
-      _fzf_wrapper --multi \
+      _fzf_wrapper  \
         --prompt="Api-resources> " \
         --ansi \
         --header-lines=1 \
@@ -12,9 +12,13 @@ function _fzf_k8s_search_api_resources --description "Search api-resources on th
         $fzf_k8s_api_resources_opts
     )
     if test $status -eq 0
-      #clean commandline and pass api resource to search_resource
-      commandline 
+      #search resource, and prefix with api-resource
+      set -l cursor_position $(commandline -C)
       _fzf_k8s_search_resource $api_resource_selected
+      commandline -C $cursor_position
+      commandline --insert -- "$api_resource_selected/"
+      set length (string length (commandline))
+      commandline -C $length
     end
 
     commandline --function repaint
